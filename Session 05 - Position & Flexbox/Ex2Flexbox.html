@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2 - Flexbox Content</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .content {
+      border: 1px solid black;
+      flex-basis: 30%;
+    }
+
+    /* presuo */
+    .content:nth-child(1) {
+      background-color: lightblue;
+    }
+
+    .content:nth-child(2) {
+      background-color: lightcoral;
+    }
+
+    .content:nth-child(3) {
+      background-color: lightgreen;
+    }
+
+    button:hover {
+      background-color: red;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- Content 1 -->
+      <div class="content">
+        <h3>Content One</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          consectetur vero delectus, quod sequi, commodi quisquam voluptate odit
+          tenetur ipsum, maxime fugiat quam amet doloremque magnam nihil optio
+          laborum officia nemo dignissimos praesentium? Praesentium ducimus
+          nobis aliquam molestiae quos nisi et rem, voluptas dolor labore omnis
+          culpa quod reiciendis quasi tempora neque excepturi eum minima sunt
+          odit tenetur, dolore eius! Nostrum, suscipit quas similique, harum
+          dolorem ratione qui ut odit esse quibusdam voluptatibus deleniti.
+          Corrupti perferendis nesciunt veniam recusandae maxime omnis, aut
+          debitis numquam suscipit voluptatum consequatur laborum magni ratione
+          assumenda voluptas quod, placeat molestiae quae? Consectetur
+          reiciendis ex voluptate.
+        </p>
+      </div>
+
+      <!-- Content 2 -->
+      <div class="content">
+        <h3>Content Two</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          consectetur vero delectus, quod sequi, commodi quisquam voluptate odit
+          tenetur ipsum, maxime fugiat quam amet doloremque magnam nihil optio
+          laborum officia nemo dignissimos praesentium? Praesentium ducimus
+          nobis aliquam molestiae quos nisi et rem, voluptas dolor labore omnis
+          culpa quod reiciendis quasi tempora neque excepturi eum minima sunt
+          odit tenetur, dolore eius! Nostrum, suscipit quas similique, harum
+          dolorem ratione qui ut odit esse quibusdam voluptatibus deleniti.
+          Corrupti perferendis nesciunt veniam recusandae maxime omnis, aut
+          debitis numquam suscipit voluptatum consequatur laborum magni ratione
+          assumenda voluptas quod, placeat molestiae quae? Consectetur
+          reiciendis ex voluptate.
+        </p>
+      </div>
+
+      <!-- Content 3 -->
+      <div class="content">
+        <h3>Content Three</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          consectetur vero delectus, quod sequi, commodi quisquam voluptate odit
+          tenetur ipsum, maxime fugiat quam amet doloremque magnam nihil optio
+          laborum officia nemo dignissimos praesentium? Praesentium ducimus
+          nobis aliquam molestiae quos nisi et rem, voluptas dolor labore omnis
+          culpa quod reiciendis quasi tempora neque excepturi eum minima sunt
+          odit tenetur, dolore eius! Nostrum, suscipit quas similique, harum
+          dolorem ratione qui ut odit esse quibusdam voluptatibus deleniti.
+          Corrupti perferendis nesciunt veniam recusandae maxime omnis, aut
+          debitis numquam suscipit voluptatum consequatur laborum magni ratione
+          assumenda voluptas quod, placeat molestiae quae? Consectetur
+          reiciendis ex voluptate.
+        </p>
+      </div>
+    </div>
+
+    <button>Click</button>
+  </body>
+</html>

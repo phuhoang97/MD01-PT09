@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex Grid</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    .container {
+      display: grid;
+      gap: 10px;
+      margin: 0 auto;
+      grid-template-columns: 250px 250px 250px;
+      grid-template-rows: 300px 300px 300px;
+      grid-template-areas:
+        "item1 item2 item3"
+        "item1 item4 item5";
+    }
+
+    .item img {
+      object-fit: cover;
+    }
+
+    .item-1 {
+      grid-area: item1;
+    }
+
+    .item-2 {
+      grid-area: item2;
+    }
+
+    .item-3 {
+      grid-area: item3;
+    }
+
+    .item-4 {
+      grid-area: item4;
+    }
+
+    .item-5 {
+      grid-area: item5;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item item-1">
+        <img
+          src="https://i.pinimg.com/236x/fe/9a/81/fe9a81ad405d83d43eaf3305b578dba7.jpg"
+          alt="photo"
+          width="250px"
+          height="610px"
+        />
+      </div>
+
+      <div class="item item-2">
+        <img
+          src="https://i.pinimg.com/236x/47/6f/04/476f048b50a8f82dcad67e9379230b9a.jpg"
+          alt="photo"
+          width="250px"
+          height="300px"
+        />
+      </div>
+
+      <div class="item item-3">
+        <img
+          src="https://i.pinimg.com/236x/d5/d8/e8/d5d8e89b24db1b1def02598641007786.jpg"
+          alt="photo"
+          width="250px"
+          height="300px"
+        />
+      </div>
+
+      <div class="item item-4">
+        <img
+          src="https://i.pinimg.com/236x/88/1c/40/881c407093e2cf366c3cfe32dbb98e25.jpg"
+          alt="photo"
+          width="250px"
+          height="300px"
+        />
+      </div>
+
+      <div class="item item-5">
+        <img
+          src="https://i.pinimg.com/236x/02/44/6a/02446a09b64b29a7d158e12ac79c96b7.jpg"
+          alt="photo"
+          width="250px"
+          height="300px"
+        />
+      </div>
+    </div>
+  </body>
+</html>

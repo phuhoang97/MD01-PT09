@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Positon</title>
+  </head>
+  <style>
+    .container {
+      background-color: rgb(177, 226, 210);
+      height: 200px;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+    }
+
+    .box-1 {
+      background-color: lightblue;
+      position: absolute;
+      top: 200px;
+      left: 50px;
+    }
+
+    .box-2 {
+      background-color: lightcoral;
+    }
+
+    .box-3 {
+      background-color: lightgreen;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 10px;
+      /* bottom: 10; */
+      background-color: antiquewhite;
+      height: 20px;
+    }
+
+    body {
+      height: 200vh;
+    }
+    .fixed {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: green;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+    }
+  </style>
+  <body>
+    <!-- Khi sử dụng position có thể sử dụng được các thuộc tính: top, left, right, bottom (Trừ position: static) -->
+    <!-- Relative: vị trí tương đối - Sử dụng chỉnh vị trí hiển thị của thẻ đó làm gốc tọa độ -->
+    <!-- <div class="relative">Position - relative</div> -->
+
+    <!-- Absolute: vị trí tuyệt đối
+    + Khi sử dụng absolute mà phân tử cha không sử dụng positon khác thì sẽ lấy cửa sổ trình duyệt làm gốc tọa độ
+    + Nếu phần tử cha sử dụng positon thì sẽ lấy phần tử cha làm gốc tọa độ
+    -->
+
+    <!-- Sticky: Vị trí window: Sẽ dựa vào position khác -->
+    <!-- Fixed: Vị trí window: Sẽ dựa vào cửa số trình duyệt không bị ảnh hưởng bởi các position khác-->
+
+    <div class="container">
+      <div class="box box-1">Box 1</div>
+      <div class="box box-2">Box 2</div>
+      <div class="box box-3">Box 3</div>
+    </div>
+
+    <div class="sticky">NavBar - Sticky</div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit odio nihil
+      itaque nesciunt, nulla cupiditate doloribus dicta eum blanditiis unde
+      iusto labore, veniam nisi tempora eaque eos rem soluta? Nihil, atque
+      quibusdam! Aliquam suscipit ex laudantium molestiae eaque doloremque
+      recusandae a temporibus vel. Cupiditate facere atque tempore nisi
+      aspernatur temporibus hic, numquam laudantium provident doloribus unde
+      modi vel perspiciatis suscipit commodi sint nihil? Sequi harum obcaecati
+      expedita est accusantium omnis ipsa sed minima amet neque! Ab atque nobis
+      dolor eum quae sint, adipisci architecto quo ad error eaque odit
+      consequatur repellat beatae, aut eligendi, blanditiis tempora facere
+      tenetur. Laborum, dicta.
+    </p>
+
+    <!-- Fixed -->
+    <div class="fixed">Call</div>
+  </body>
+</html>

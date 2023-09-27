@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Ex8</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 600px;
+      height: 270px;
+      border: 1px solid lightblue;
+    }
+
+    .header-item {
+      background-color: rgb(154, 206, 224);
+      /* Trên dưới trái phải - trên dưới || trái phải */
+      padding: 20px 10px;
+    }
+
+    .icon-header {
+      margin-left: 430px;
+    }
+
+    .content-item {
+      padding: 10px;
+    }
+
+    .content-item span {
+      color: lightpink;
+    }
+
+    .header-item2 {
+      padding: 20px 10px;
+      border: 1px solid lightblue;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- Item 1 -->
+      <div class="item1">
+        <!-- Header Item -->
+        <div class="header-item">
+          <span>Accordion Item #1</span>
+          <span class="icon-header"
+            ><i class="fa-solid fa-chevron-up"></i
+          ></span>
+        </div>
+        <!-- Content Item -->
+        <div class="content-item">
+          <strong
+            >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </strong>
+          Rem ab inventore totam sapiente blanditiis. Rerum incidunt illum
+          reprehenderit esse quas! At molestias magni, amet enim commodi
+          doloremque praesentium officia laudantium aut
+          <span>natus cum laborum</span>, impedit, soluta dolor obcaecati
+          delectus sint!
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="item2">
+        <div class="header-item2">
+          <span>Accordion Item #2</span>
+          <span class="icon-header"
+            ><i class="fa-solid fa-chevron-up"></i
+          ></span>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="item2">
+        <div class="header-item2">
+          <span>Accordion Item #3</span>
+          <span class="icon-header"
+            ><i class="fa-solid fa-chevron-up"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

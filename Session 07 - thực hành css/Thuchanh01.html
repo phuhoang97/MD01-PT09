@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành 01</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- Khi sử dụng các link cdn thì sẽ để trước link CSS project -->
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      /* width: 1200px; */
+      border: 1px solid black;
+      margin: auto;
+    }
+
+    .header {
+      height: 50px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      /* padding: 10px 20px; */
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      font-size: 25px;
+    }
+
+    .header i {
+      padding-right: 10px;
+    }
+
+    .banner-content {
+      position: relative;
+      height: 50vh;
+    }
+
+    .album-example {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .album-example p {
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    .album-example h2 {
+      font-size: 30px;
+    }
+
+    /* :nth-child() */
+
+    .album-example button:nth-child(3) {
+      background-color: blue;
+      color: white;
+      width: 150px;
+      height: 30px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .album-example button:nth-child(4) {
+      background-color: gray;
+      color: white;
+      width: 150px;
+      height: 30px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .list-card {
+      background-color: rgb(229, 231, 232);
+      height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .card-item {
+      width: 270px;
+      height: 320px;
+      background-color: lightpink;
+      border-radius: 10px;
+      box-shadow: 5px 5px rgb(225, 225, 225);
+      margin-top: 20px;
+    }
+
+    .thumbnail-img {
+      background-color: gray;
+      height: 170px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card-item p {
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    .card-footer {
+      display: flex;
+      height: 35px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+
+    .card-footer div button {
+      width: 50px;
+      height: 27px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    /* responsive từ màn hình 600px - 768px */
+    @media only screen and (min-width: 600px) and (max-width: 768px) {
+      .container {
+        width: 700px;
+      }
+      .list-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        flex-wrap: nowrap;
+        height: auto;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- Start Header -->
+      <div class="header"><i class="fa-solid fa-camera"></i>Album</div>
+      <!-- End Header -->
+
+      <!-- Start Banner content -->
+      <div class="banner-content">
+        <div class="album-example">
+          <h2>Album example</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+            eos quaerat commodi similique modi nobis facilis eligendi excepturi
+            quisquam aliquam.
+          </p>
+          <button>Main call to action</button>
+          <button>Secondary action</button>
+        </div>
+      </div>
+      <!-- End Banner content -->
+
+      <!-- Start Card -->
+      <div class="list-card">
+        <!-- Card 1 -->
+        <div class="card-item">
+          <div class="thumbnail-img">Thumbnail</div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            maiores modi dolorum.
+          </p>
+          <div class="card-footer">
+            <div>
+              <button>View</button>
+              <button>Edit</button>
+            </div>
+            <span>9 min</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-item">
+          <div class="thumbnail-img">Thumbnail</div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            maiores modi dolorum.
+          </p>
+          <div class="card-footer">
+            <div>
+              <button>View</button>
+              <button>Edit</button>
+            </div>
+            <span>9 min</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-item">
+          <div class="thumbnail-img">Thumbnail</div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            maiores modi dolorum.
+          </p>
+          <div class="card-footer">
+            <div>
+              <button>View</button>
+              <button>Edit</button>
+            </div>
+            <span>9 min</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card-item">
+          <div class="thumbnail-img">Thumbnail</div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            maiores modi dolorum.
+          </p>
+          <div class="card-footer">
+            <div>
+              <button>View</button>
+              <button>Edit</button>
+            </div>
+            <span>9 min</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card-item">
+          <div class="thumbnail-img">Thumbnail</div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            maiores modi dolorum.
+          </p>
+          <div class="card-footer">
+            <div>
+              <button>View</button>
+              <button>Edit</button>
+            </div>
+            <span>9 min</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card-item">
+          <div class="thumbnail-img">Thumbnail</div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            maiores modi dolorum.
+          </p>
+          <div class="card-footer">
+            <div>
+              <button>View</button>
+              <button>Edit</button>
+            </div>
+            <span>9 min</span>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+    </div>
+  </body>
+</html>

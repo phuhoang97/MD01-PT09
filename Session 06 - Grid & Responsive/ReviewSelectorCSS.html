@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review selector CSS</title>
+  </head>
+  <style>
+    /* p {
+      color: aqua;
+    } */
+
+    /* div p {
+      color: yellow;
+    } */
+
+    /* div > p {
+      color: yellow;
+    }
+
+    .active-p:active {
+      color: red;
+    } */
+
+    div p:nth-child(1) {
+      color: rgb(79, 184, 219);
+    }
+
+    div p:nth-child(2) {
+      color: rgb(229, 229, 70);
+    }
+  </style>
+  <body>
+    <!-- <p>Lorem ipsum dolor sit amet. 1</p> -->
+    <div>
+      <p>Lorem ipsum dolor sit amet. 3</p>
+      <p>Lorem ipsum dolor sit amet. 4</p>
+    </div>
+    <p class="active-p">Lorem ipsum dolor sit amet. 2</p>
+  </body>
+</html>
