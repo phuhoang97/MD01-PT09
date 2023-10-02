@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-bg {
+  width: 100%;
+  position: relative;
+}
+
+.hero-bg img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  height: 100vh;
+  /* background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-attachment: scroll; */
+}
+
+/* .hero-bg .test {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.36)
+  );
+
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+} */
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(44, 43, 43);
+  color: white;
+  height: 50px;
+  align-items: center;
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.contact-header span i {
+  color: gold;
+}
+
+.nav-guarder {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-evenly;
+  width: 600px;
+  z-index: 3;
+}
+
+.nav-guarder ul li {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-content li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-content li:hover {
+  background-color: black;
+}
+
+.nav-guarder h3 {
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.header-content {
+  height: 250px;
+  padding: 10px;
+  width: 600px;
+  position: absolute;
+  top: 45%;
+  left: 80px;
+  z-index: 3;
+}
+
+.header-content div {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.header-content div:nth-child(2) {
+  color: gold;
+}
+
+.header-content p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.header-content button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+}
+
+.header-content button:nth-child(5) {
+  color: white;
+  background-color: gold;
+}
+
+.test {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.36)
+  );
+  z-index: 2;
+}
+
+.content-one {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 3%;
+}
+
+.content-img {
+  background: url(./images/about-img.jpg) no-repeat;
+  height: 350px;
+  width: 450px;
+  position: relative;
+  margin: 0 20%;
+  border-radius: 5px;
+}
+
+.content-text {
+  width: 500px;
+  padding: 20px;
+  position: absolute;
+  left: 46%;
+  background-color: rgb(230, 231, 232);
+}
+
+.content-text h4 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.content-text hr {
+  width: 50px;
+  height: 5px;
+  background-color: gold;
+  border: 1px solid gold;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.content-text p {
+  margin-bottom: 10px;
+}
+
+.content-text button {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: gold;
+  color: white;
+  border: none;
+}
+
+.container-services {
+  background-color: rgb(32, 31, 31);
+  color: white;
+  height: 70vh;
+}
+
+.text-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.container-services .text-services h3 {
+  font-size: 30px;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.container-services .text-services hr {
+  width: 30px;
+  height: 5px;
+  background-color: gold;
+  border-radius: 5px;
+  border: none;
+  margin-top: 4px;
+}
+
+.services-item {
+  background-color: white;
+  width: 300px;
+  text-align: center;
+  color: black;
+  padding: 20px;
+  height: 350px;
+}
+
+.services-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.services-item h6 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.services-item p {
+  margin-bottom: 20px;
+}
+
+.services-item button {
+  width: 120px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: gold;
+  color: white;
+  border: none;
+}
+
+.services {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}

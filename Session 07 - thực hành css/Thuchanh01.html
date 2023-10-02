@@ -87,26 +87,29 @@
 
     .list-card {
       background-color: rgb(229, 231, 232);
-      height: 100vh;
       display: flex;
       flex-wrap: wrap;
-      gap: 40px;
-      justify-content: space-evenly;
-      align-items: center;
+      justify-content: space-evenly; /* Để chia đều các phần tử */
+      gap: 20px;
     }
 
     .card-item {
-      width: 270px;
+      flex-basis: calc(
+        30% - 20px
+      ); /* 33.33% để mỗi dòng chỉ có 3 phần tử và trừ đi khoảng cách */
+      width: 80%; /* Cần thiết để xác định chiều rộng tối đa cho các phần tử */
       height: 320px;
       background-color: lightpink;
       border-radius: 10px;
-      box-shadow: 5px 5px rgb(225, 225, 225);
+      box-shadow: 5px 5px rgba(255, 255, 255, 0.2);
       margin-top: 20px;
+      transition: opacity 0.3s ease; /* Hiệu ứng mờ mờ */
+      opacity: 1; /* Mặc định, card có độ trong suốt 100% */
     }
 
     .thumbnail-img {
       background-color: gray;
-      height: 170px;
+      height: 200px;
       color: white;
       font-weight: bold;
       font-size: 22px;
@@ -136,17 +139,24 @@
       border: none;
     }
 
+    .card-item {
+      /* flex-basis: calc(30% - 20px); */
+    }
+
     /* responsive từ màn hình 600px - 768px */
-    @media only screen and (min-width: 600px) and (max-width: 768px) {
-      .container {
-        width: 700px;
+    @media only screen and (max-width: 600px) {
+      .card-item {
+        flex-basis: calc(100% - 20px); /* Một cột cho màn hình nhỏ */
       }
+    }
+
+    /* Thiết lập responsive cho màn hình trung bình (2 cột) */
+    @media only screen and (min-width: 601px) and (max-width: 768px) {
       .list-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        flex-wrap: nowrap;
-        height: auto;
+        justify-content: space-between;
+      }
+      .card-item {
+        flex-basis: calc(50% - 20px); /* Hai cột cho màn hình trung bình */
       }
     }
   </style>
