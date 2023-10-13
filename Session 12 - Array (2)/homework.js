@@ -235,18 +235,116 @@ là 'tHE qUICK bROWN fOX'.
 // console.log(greeting.toLowerCase());
 
 // Chữa bài
-let strInput = "The Quick Brown Fox";
-let result = "";
+// let strInput = "The Quick Brown Fox";
+// let result = "";
 
-for (let i = 0; i < strInput.length; i++) {
-  let arr = strInput[i];
-  if (arr === arr.toLowerCase()) {
-    // arr[3] =
-    // "" === "".toLowerCase()
-    result += arr.toUpperCase();
-  } else {
-    result += arr.toLowerCase();
+// for (let i = 0; i < strInput.length; i++) {
+//   let arr = strInput[i];
+//   if (arr === arr.toLowerCase()) {
+//     // arr[3] =
+//     // "" === "".toLowerCase()
+//     result += arr.toUpperCase();
+//   } else {
+//     result += arr.toLowerCase();
+//   }
+// }
+
+// console.log(result);
+
+/*
+Bài 6: Tạo một mảng chứa ít nhất 5 số, sau đó yêu cầu người dùng nhập một số, thực
+hiện tìm kiếm để tìm số trong mảng, nếu số được tìm thấy, hãy cho người dùng biết
+rằng với chỉ số của nó trong mảng, nếu không, cũng nói với họ như vậy
+*/
+
+// Chữa bài
+// let arr = [3, 4, 6, -9, 10, -88, 2];
+// // let check = false;
+// let index = -1;
+// let inputUser = +prompt("Nhập số cần tìm");
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (inputUser === arr[i]) {
+//     // check = true;
+//     index = i;
+//     break;
+//   }
+// }
+
+// if (index !== -1) {
+//   alert(` Số ${inputUser} được tìm thấy và có vị trí index là ${index}`);
+// } else {
+//   alert(` Số ${inputUser} không tìm thấy trong mảng`);
+// }
+
+//4.1 Create an array to represent the sizes of your flock, and log all of your flock size, expected screen output:
+let array = [5, 7, 300, 90, 24, 50, 75];
+console.log("Xin chào, đây là kích thước đàn cừu của tôi: ");
+console.log(array);
+
+// //4.2 At the end of each month, you have to choose one and only one sheep to shear and thus you want to choose the biggest one to maximize your profit. Add scripts to search for the biggest sheep in your list:
+console.log(
+  " Con cừu lớn nhất của tôi có kích thước " +
+    Math.max(...array) +
+    ", hãy cạo nó"
+);
+
+// //4.3 Khi kích thước lớn nhất của bạn, kích thước của nó sẽ trở về kích thước mặc định, là 8.
+console.log("Sau khi cạo lông, đây là đàn của tôi");
+let temp = array.indexOf(300); //tim vi tri cua 300
+array[temp] = 8; //update
+console.log(array);
+
+// //4.4 In the following month, EVERY sheep in your flock grow, they have their size increased by 50. Log them out
+// console.log("4.4");
+console.log(
+  "MONTH 1" +
+    "\n" +
+    " Đã một tháng trôi qua, bầy cừu của tôi đã lớn, đây là kích thước của chúng"
+);
+for (let index = 0; index <= array.length - 1; index++) {
+  array[index] += 50;
+}
+console.log(array);
+
+console.log(
+  " Bây giờ con cừu lớn nhất của tôi có kích thước " +
+    Math.max(...array) +
+    ", hãy cạo nó"
+);
+console.log("Sau khi xén lông, đây là đàn của tôi");
+temp = array.indexOf(Math.max(...array)); //tim vi tri cua max
+array[temp] = 8; //update
+console.log(array);
+
+//4.5 Let’s do this for 4 months (or as long as you want)
+for (let month = 2; month < 4; month++) {
+  for (let index = 0; index <= array.length - 1; index++) {
+    array[index] += 50;
   }
+  console.log(
+    "MONTH " +
+      month +
+      "\n" +
+      " Đã một tháng trôi qua, bầy cừu của tôi đã lớn, đây là kích thước của chúng"
+  );
+
+  console.log(array);
+  console.log(
+    " Bây giờ con cừu lớn nhất của tôi có kích thước " +
+      Math.max(...array) +
+      ", hãy cạo nó"
+  );
+  console.log("Sau khi xén lông, đây là đàn của tôi");
+  temp = array.indexOf(Math.max(...array)); //tim vi tri cua max
+  array[temp] = 8; //update
+  console.log(array);
 }
 
-console.log(result);
+// 4.6
+let total = 0;
+for (let index = 0; index <= array.length - 1; index++) {
+  total += array[index];
+}
+console.log("Đàn của tôi có tổng kích thước" + " " + total);
+console.log("tôi sẽ lấy " + total + " * 2$ = " + total * 2);
