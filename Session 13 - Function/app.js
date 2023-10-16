@@ -156,12 +156,70 @@ output: 7.2
 
 // let inputUser = +prompt("Nhập giá trị bất kỳ");
 
-function giaiThua(number) {
-  let result = 1;
-  for (let i = 1; i <= number; i++) {
-    // number = 5. i => 1,2,3,4,5
-    result *= i;
+// function giaiThua(number) {
+//   let result = 1;
+//   for (let i = 1; i <= number; i++) {
+//     // number = 5. i => 1,2,3,4,5
+//     result *= i;
+//   }
+//   return result;
+// }
+// console.log(giaiThua(5));
+
+// function longestString(strings) {
+//   let longest = strings[0];
+//   for (let i = 1; i < strings.length; i++) {
+//     if (strings[i].length > longest.length) {
+//       longest = strings[i];
+//     }
+//   }
+//   return longest;
+// }
+
+// const inputStrings = ["Black", "Pinkss", "Green", "Blue", "Yellow"];
+// console.log(longestString(inputStrings));
+
+// function longestStrings(element) {
+//   let longest = [element[0]];
+//   let maxLength = element[0].length;
+
+//   for (let i = 1; i < element.length; i++) {
+//     if (element[i].length > maxLength) {
+//       longest = [element[i]];
+//       maxLength = element[i].length;
+//     } else if (element[i].length === maxLength) {
+//       longest.push(element[i]);
+//     }
+//   }
+
+//   return longest;
+// }
+
+// const inputStrings = ["Black", "Pink", "Green", "Blue", "Yellow", "Orange"];
+// console.log(longestStrings(inputStrings));
+
+function kiem_tra_snt(n) {
+  let flag = true;
+
+  // Nếu n bé hơn 2 tức là không phải số nguyên tố
+  if (n < 2) {
+    flag = false;
+  } else {
+    // lặp từ 2 tới n-1
+    for (let i = 2; i < n; i++) {
+      if (n % i == 0) {
+        flag = false;
+        break;
+      }
+    }
   }
-  return result;
+
+  // Kiểm tra biến flag
+  if (flag == true) {
+    document.write(n + " là số nguyên tố <br/>");
+  } else {
+    document.write(n + " không phải là số nguyên tố <br/>");
+  }
 }
-console.log(giaiThua(5));
+
+kiem_tra_snt(4);
