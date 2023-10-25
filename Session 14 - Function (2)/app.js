@@ -141,7 +141,6 @@ t2 = 0; t1 = 3
 // }
 // console.log(Average());
 
-
 /*
 Bài 1: Cho người dùng nhập vào chuỗi số bất kì. Viết hàm sắp xếp chuỗi số đó từ bé đến lớn
 input: 2,3,5,4,1
@@ -163,3 +162,17 @@ Bài 5: Viết một hàm nhận một mảng các số làm đối số và tr�
 input: 1,2,3,4,5,6,7,8
 output: 2,3,5,7
 */
+
+// let a = Math.floor(Math.random() * 10);
+// let b = Math.floor(Math.random() * 10);
+// let sum = a + b;
+// console.log(sum);
+
+// alert(`${a} + ${b} = `);
+// let input = +prompt("Nhập số bất kỳ");
+
+// if (sum === input) {
+//   alert("Đúng");
+// } else {
+//   alert("Sai");
+// }
