@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sản phẩm</title>
+  </head>
+  <body>
+    <h1>Quản lý sản phẩm</h1>
+
+    <form id="main-form" onsubmit="addProduct()">
+      <label>ID:</label>
+      <input id="id-product" type="text" />
+      <br />
+
+      <label>Tên sản phẩm:</label>
+      <input id="name-product" type="text" />
+      <br />
+
+      <label>Giá tiền:</label>
+      <input id="price-product" type="text" />
+      <br />
+
+      <label>Danh mục:</label>
+      <input id="category-product" type="text" />
+      <br />
+
+      <button>Add</button>
+    </form>
+
+    <ul id="list-product"></ul>
+
+    <script src="./ManagerProduct.js"></script>
+  </body>
+</html>

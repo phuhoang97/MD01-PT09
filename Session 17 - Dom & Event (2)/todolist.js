@@ -44,9 +44,18 @@ form.addEventListener("submit", (event) => {
   todoList.appendChild(li);
 
   input.value = "";
+
   //   btnDelete.onclick = () => {
   //     li.remove();
   //   };
+
+  // li.addEventListener("click", () => {
+  //   if (!li.classList.contains("complete")) {
+  //     li.classList.add("complete");
+  //   } else {
+  //     li.classList.remove("complete");
+  //   }
+  // });
 });
 
 todoList.addEventListener("click", (e) => {
@@ -56,6 +65,11 @@ todoList.addEventListener("click", (e) => {
     e.target.parentElement.remove();
   }
 
-  // Dựa vào chức năng delete làm chức năng complate
+  // Dựa vào chức năng delete làm chức năng complete
   // Dựa vào class => thêm style => text-decoration: line-through
+  if (!e.target.classList.contains("complete")) {
+    e.target.classList.add("complete");
+  } else {
+    e.target.classList.remove("complete");
+  }
 });
