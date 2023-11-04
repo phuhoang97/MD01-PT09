@@ -1,4 +1,6 @@
 const mainForm = document.getElementById("main-form");
+let editIndex = -1; // Lấy vị trí index của phần tử
+let exitstingItem = false; // Đặt flag trạng khi click edit
 
 function renderProduct() {
   const setItem = JSON.parse(localStorage.getItem("Product"));
@@ -19,7 +21,7 @@ function renderProduct() {
           Name: ${product.name} <br/>
           Price: ${product.price} <br/>
           Category: ${product.category} <br/>
-          <button>Edit</button>
+          <button onclick="editProduct(${i})">Edit</button>
           <button onclick="deleteProduct(${i})">Delete</button>
       `;
     // Thêm li vào ul
@@ -47,7 +49,17 @@ mainForm.addEventListener("submit", (e) => {
 
   // lấy trong local nếu chưa có sẽ set vào []
   const setItem = JSON.parse(localStorage.getItem("Product")) || [];
-  setItem.push(newProduct);
+
+  // Nếu trạng thái true
+  if (exitstingItem) {
+    // Cập nhật lại tại vị trí của item đấy
+    setItem[editIndex] = newProduct;
+    // Set lại các giá trị về mặc định
+    // exitstingItem = false;
+    document.getElementById("btn-submit").textContent = "Add";
+  } else {
+    setItem.push(newProduct);
+  }
 
   //   console.log("newProduct", newProduct);
   // set vào localStorage
@@ -74,3 +86,20 @@ function deleteProduct(index) {
 
 // BTVN: Đọc và xem lại phần dom và localStorage
 // Làm lại bài và hoàn thành nốt phần edit
+
+function editProduct(index) {
+  // console.log(index);
+  const Products = JSON.parse(localStorage.getItem("Product"));
+  const Product = Products[index];
+
+  document.getElementById("id-product").value = Product.id;
+  document.getElementById("name-product").value = Product.name;
+  document.getElementById("price-product").value = Product.price;
+  document.getElementById("category-product").value = Product.category;
+
+  editIndex = index; // set lại giá trị -1 = giá trị index phần tử
+  exitstingItem = true; // set lại trạng thái true
+
+  // Đổi button thành Update
+  document.getElementById("btn-submit").textContent = "Update";
+}
